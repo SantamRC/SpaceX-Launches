@@ -9,7 +9,7 @@ function Home() {
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
+      setLoading(true);
     }, 3000);
     async function getData() {
       getLaunchPads().then((result) => {
@@ -29,7 +29,7 @@ function Home() {
             height: "100%",
             top: "0",
             left: "0",
-            backgroundColor: "white",
+            backgroundColor: "#f3f5f8",
             position: "absolute",
           }}
         >
