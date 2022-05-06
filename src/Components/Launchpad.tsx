@@ -19,11 +19,22 @@ export default function Launchpad({
   image: string;
 }) {
   return (
-    <Box sx={{ width: "40%", float: "left", margin: "1% 5%" }}>
-      <Card variant="outlined">
+    <Box
+      sx={{
+        width: "40%",
+        float: "left",
+        margin: "1% 5%",
+      }}
+    >
+      <Card
+        variant="outlined"
+        style={{
+          boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+        }}
+      >
         <div style={{ display: "flex" }}>
-          <img style={{ width: "40%" }} src={image} alt={"Rocket"} />
-          <CardContent style={{ width: "30%" }}>
+          <img style={{ width: "40%", flex: 1.5 }} src={image} alt={"Rocket"} />
+          <CardContent style={{ width: "30%", flex: 1 }}>
             <Typography sx={{ fontSize: 14 }} color="text.primary" gutterBottom>
               {name}
             </Typography>
