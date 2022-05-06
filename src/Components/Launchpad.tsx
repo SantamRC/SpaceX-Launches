@@ -2,7 +2,6 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -21,15 +20,16 @@ export default function Launchpad({
   return (
     <Box
       sx={{
-        width: "40%",
+        width: "48%",
         float: "left",
-        margin: "1% 5%",
+        margin: "1% 1%",
       }}
     >
       <Card
         variant="outlined"
         style={{
           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+          height: "12rem",
         }}
       >
         <div style={{ display: "flex" }}>
