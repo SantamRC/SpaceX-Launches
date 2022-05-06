@@ -9,7 +9,7 @@ function Home() {
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(true);
+      setLoading(false);
     }, 3000);
     async function getData() {
       getLaunchPads().then((result) => {
