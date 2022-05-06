@@ -11,34 +11,39 @@ export default function Launchpad({
   name,
   status,
   launches,
+  image,
 }: {
   name: string;
   status: string;
   launches: any;
+  image: string;
 }) {
   return (
-    <Box sx={{ minWidth: "40%", float: "left", margin: "1% 5%" }}>
+    <Box sx={{ width: "40%", float: "left", margin: "1% 5%" }}>
       <Card variant="outlined">
-        <React.Fragment>
-          <CardContent>
+        <div style={{ display: "flex" }}>
+          <img style={{ width: "40%" }} src={image} alt={"Rocket"} />
+          <CardContent style={{ width: "30%" }}>
             <Typography sx={{ fontSize: 14 }} color="text.primary" gutterBottom>
               {name}
             </Typography>
             <Typography sx={{ fontSize: 14 }} color="text.primary" gutterBottom>
               Status: {status}
             </Typography>
-            <Typography sx={{ fontSize: 14 }} color="text.primary" gutterBottom>
+            <Typography
+              sx={{ fontSize: 14, display: "block" }}
+              color="text.primary"
+              gutterBottom
+            >
               Top 3 Launches
             </Typography>
-          </CardContent>
-          <CardActions>
             {launches.map((launch: any, index: number) => (
               <Button key={index} size="small" href={`launch/${launch}`}>
                 Launch {index + 1}
               </Button>
             ))}
-          </CardActions>
-        </React.Fragment>
+          </CardContent>
+        </div>
       </Card>
     </Box>
   );

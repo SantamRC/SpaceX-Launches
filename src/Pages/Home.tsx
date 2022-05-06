@@ -25,6 +25,7 @@ function Home() {
             launches={launchPad.launches.filter(
               (launch: any, ind: number) => ind < 3
             )}
+            image={launchPad.images.large[0]}
           />
         ))}
     </div>
