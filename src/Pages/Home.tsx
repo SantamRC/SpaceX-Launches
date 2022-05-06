@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Appbar from "../Components/Appbar";
 import Launchpad from "../Components/Launchpad";
 import getLaunchPads from "../Utilities/getLaunchPads";
 
@@ -17,7 +16,6 @@ function Home() {
 
   return (
     <div>
-      <Appbar />
       {launchPads &&
         launchPads.map((launchPad, id) => (
           <Launchpad

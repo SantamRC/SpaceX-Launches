@@ -27,13 +27,15 @@ export default function Launchpad({
             <Typography sx={{ fontSize: 14 }} color="text.primary" gutterBottom>
               Status: {status}
             </Typography>
+            <Typography sx={{ fontSize: 14 }} color="text.primary" gutterBottom>
+              Top 3 Launches
+            </Typography>
           </CardContent>
-          <Typography sx={{ fontSize: 14 }} color="text.primary" gutterBottom>
-            Top 3 Launches
-          </Typography>
           <CardActions>
             {launches.map((launch: any, index: number) => (
-              <Button size="small">Details</Button>
+              <Button key={index} size="small" href={`launch/${launch}`}>
+                Launch {index + 1}
+              </Button>
             ))}
           </CardActions>
         </React.Fragment>
