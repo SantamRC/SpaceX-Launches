@@ -1,9 +1,12 @@
 import React from 'react'
+import Appbar from "./Components/Appbar";
 
 function App() {
   return (
-    <div>App</div>
-  )
+    <div>
+      <Appbar />
+    </div>
+  );
 }
 
 export default App
